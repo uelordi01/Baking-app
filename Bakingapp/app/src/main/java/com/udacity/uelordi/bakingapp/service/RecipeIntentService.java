@@ -15,6 +15,6 @@ public class RecipeIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        RecipeTask.getInstance().SyncInmediatelly();
+        RecipeTask.getInstance().SyncInmediatelly(getApplicationContext());
     }
 }

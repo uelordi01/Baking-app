@@ -16,7 +16,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface DBMovieServiceEndPoint {
-    @GET("/baking.json")
+    @GET("/topher/2017/May/59121517_baking/baking.json")
     Call<List<Recipe>> getRecipeList();
 //    @GET("movie/{id}/reviews")
 //    Call<ReviewResponse> getMovieReviews(@Path("id") long movieId, @Query("api_key") String api_key);

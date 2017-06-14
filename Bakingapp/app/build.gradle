@@ -33,4 +33,5 @@ dependencies {
     annotationProcessor 'net.simonvt.schematic:schematic-compiler:0.5.3'
     compile 'net.simonvt.schematic:schematic:0.5.3'
     testCompile 'junit:junit:4.12'
+
 }

@@ -11,11 +11,14 @@ import static com.udacity.uelordi.bakingapp.database.BakingDatabase.RECIPE_TABLE
 /**
  * Created by uelordi on 14/06/2017.
  */
+
+
 @ContentProvider(authority = BakingContentProvider.AUTHORITY,
         database = BakingDatabase.class)
 public final class BakingContentProvider {
+
     public static final String AUTHORITY =
-            "com.udacity.uelordi.bakingapp.database.BakingContentProvider";
+            "com.udacity.uelordi.bakingapp.BakingContentProvider";
 
     @TableEndpoint(table = BakingDatabase.RECIPE_TABLE)
     public static class BakingRecipe {

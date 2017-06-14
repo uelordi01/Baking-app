@@ -19,11 +19,11 @@
         <service
         android:name=".service.RecipeIntentService"
         android:exported="false" />
-        <provider android:name=".database.BakingContentProvider"
-            android:authorities="udacity.uelordi.com.popularmovies"
+        <provider android:name="net.simonvt.schematic.provider.BakingContentProvider"
+            android:authorities="com.udacity.uelordi.bakingapp.BakingContentProvider"
             android:exported="false"/>
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    </application>
 
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkModule {
     private static final String STATIC_MOVIE_DB_URL =
-            "https://d17h27t6h515a5.cloudfront.net/topher/2017/May/59121517_baking";
+            "https://d17h27t6h515a5.cloudfront.net";
     private final static String IMAGE_URL_PATH = "http://image.tmdb.org/t/p/w185";
     private final static String YOUTUBE_BASE_URL="http://www.youtube.com/watch?v=";
     private static final String TAG = "NetworkModule";
@@ -39,6 +39,7 @@ public class NetworkModule {
     private Retrofit retrofit;
     private DBMovieServiceEndPoint client;
     OnHandleDataCallback mRecipeCallback;
+    private static final String LOG_TAG =" NetworkModule";
 
     public NetworkModule() {
         configureNetworkModule();
@@ -71,12 +72,17 @@ public class NetworkModule {
                         if(response.isSuccessful()) {
                             List<Recipe> mRecipe = response.body();
                             mRecipeCallback.onDataRecipesSuceed(mRecipe);
+                        } else {
+                            //TODO HANDLE THE INTERNET CONECTION
+                            if( response.code() == 404) {
+                                Log.e(LOG_TAG, response.message());
+                            }
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<Recipe>> call, Throwable t) {
-
+                        Log.e(LOG_TAG, "OnFailure "+ t.getMessage());
                     }
                 }
         );
