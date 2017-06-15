@@ -5,13 +5,14 @@ import net.simonvt.schematic.annotation.DataType;
 import net.simonvt.schematic.annotation.NotNull;
 import net.simonvt.schematic.annotation.PrimaryKey;
 
+
 import static net.simonvt.schematic.annotation.DataType.Type.INTEGER;
 import static net.simonvt.schematic.annotation.DataType.Type.TEXT;
+
 
 /**
  * Created by uelordi on 14/06/2017.
  */
-
 public interface RecipeColumns {
     @DataType(INTEGER) @PrimaryKey
     String _ID = "_id";
@@ -19,6 +20,6 @@ public interface RecipeColumns {
     @DataType(TEXT) @NotNull
     String NAME = "name";
 
-    @DataType(TEXT) @NotNull
+    @DataType(TEXT)
     String IMAGE = "image";
 }

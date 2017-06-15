@@ -55,7 +55,7 @@ public class RecipeTask implements OnHandleDataCallback
             cv.put(RecipeColumns._ID, rep.getId());
             cv.put(RecipeColumns.NAME, rep.getName());
             cv.put(RecipeColumns.IMAGE, rep.getImage());
-            cValues[index] =cv;
+            cValues[index] = cv;
             index++;
         }
         return cValues;
